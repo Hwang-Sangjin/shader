@@ -7,7 +7,7 @@ const Cube = () => {
 
   return (
     <mesh ref={mesh}>
-      <boxGeometry args={[1, 1, 0.1]} />
+      <boxGeometry args={[1, 1, 1]} />
       <shaderMaterial
         attach="material"
         vertexShader={cubeVertexShader}

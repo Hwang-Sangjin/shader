@@ -6,12 +6,17 @@ const Cube = () => {
   const mesh = useRef();
 
   return (
-    <mesh ref={mesh}>
-      <boxGeometry args={[1, 1, 1]} />
+    <mesh
+      ref={mesh}
+      position={[0, 0, 0]}
+      rotation={[-Math.PI / 2, 0, 0]}
+      scale={1.5}
+    >
+      <planeGeometry args={[1, 1, 32, 32]} />
       <shaderMaterial
-        attach="material"
-        vertexShader={cubeVertexShader}
         fragmentShader={cubeFragmentShader}
+        vertexShader={cubeVertexShader}
+        wireframe
       />
     </mesh>
   );

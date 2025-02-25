@@ -5,7 +5,7 @@ import Cube from "./Cube";
 
 const Experience = () => {
   return (
-    <Canvas camera={{ position: [1, 0.75, 6] }}>
+    <Canvas camera={{ position: [1, 1, 1] }}>
       <ambientLight intensity={1} />
       <Environment environmentIntensity={0.5} preset="studio"></Environment>
       <directionalLight

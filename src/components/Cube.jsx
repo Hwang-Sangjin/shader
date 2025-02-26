@@ -1,9 +1,24 @@
-import { useRef } from "react";
+import { useMemo, useRef } from "react";
 import cubeVertexShader from "../shader/vertex.glsl";
 import cubeFragmentShader from "../shader/fragment.glsl";
+import { useFrame } from "@react-three/fiber";
 
 const Cube = () => {
   const mesh = useRef();
+
+  const uniforms = useMemo(
+    () => ({
+      uTime: {
+        value: 0.0,
+      },
+    }),
+    []
+  );
+
+  useFrame((state) => {
+    const { clock } = state;
+    uniforms.uTime.value = clock.getElapsedTime();
+  });
 
   return (
     <mesh
@@ -16,7 +31,7 @@ const Cube = () => {
       <shaderMaterial
         fragmentShader={cubeFragmentShader}
         vertexShader={cubeVertexShader}
-        wireframe
+        uniforms={uniforms}
       />
     </mesh>
   );

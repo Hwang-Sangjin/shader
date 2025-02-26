@@ -2,6 +2,7 @@ import { useMemo, useRef } from "react";
 import cubeVertexShader from "../shader/vertex.glsl";
 import cubeFragmentShader from "../shader/fragment.glsl";
 import { useFrame } from "@react-three/fiber";
+import { Color } from "three";
 
 const Cube = () => {
   const mesh = useRef();
@@ -11,6 +12,8 @@ const Cube = () => {
       uTime: {
         value: 0.0,
       },
+      uColorA: { value: new Color("#FFE486") },
+      uColorB: { value: new Color("#FEB3D9") },
     }),
     []
   );

@@ -1,11 +1,12 @@
 import { AmbientLight } from "three";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
-import Cube from "./Cube";
+import Plane from "./Plane";
+import Sphere from "./Sphere";
 
 const Experience = () => {
   return (
-    <Canvas camera={{ position: [1, 1, 1] }}>
+    <Canvas camera={{ position: [5, 1, 5] }}>
       <ambientLight intensity={1} />
       <Environment environmentIntensity={0.5} preset="studio"></Environment>
       <directionalLight
@@ -17,7 +18,8 @@ const Experience = () => {
         shadow-bias={-0.0001}
       />
       <OrbitControls />
-      <Cube />
+      <Plane />
+      <Sphere />
     </Canvas>
   );
 };

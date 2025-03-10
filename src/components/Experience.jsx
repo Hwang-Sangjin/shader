@@ -18,8 +18,9 @@ const Experience = () => {
         shadow-bias={-0.0001}
       />
       <OrbitControls />
-      <Plane />
-      <Sphere />
+
+      {/* <Plane />
+      <Sphere /> */}
     </Canvas>
   );
 };

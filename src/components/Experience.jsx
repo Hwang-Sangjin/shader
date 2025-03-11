@@ -4,6 +4,7 @@ import { Environment, OrbitControls } from "@react-three/drei";
 import Plane from "./Plane";
 import Sphere from "./Sphere";
 import Shader2 from "./BookOfShader/shader02";
+import Shader3 from "./BookOfShader/shader03";
 
 const Experience = () => {
   return (
@@ -19,7 +20,8 @@ const Experience = () => {
         shadow-bias={-0.0001}
       />
       <OrbitControls />
-      <Shader2 />
+      <Shader3 />
+      {/* <Shader2 /> */}
       {/* <Plane />
       <Sphere /> */}
     </Canvas>

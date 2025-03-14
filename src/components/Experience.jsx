@@ -5,6 +5,7 @@ import Plane from "./Plane";
 import Sphere from "./Sphere";
 import Shader2 from "./BookOfShader/shader02";
 import Shader3 from "./BookOfShader/shader03";
+import Shader4 from "./BookOfShader/shader04";
 
 const Experience = () => {
   return (
@@ -20,7 +21,8 @@ const Experience = () => {
         shadow-bias={-0.0001}
       />
       <OrbitControls />
-      <Shader3 />
+      <Shader4 />
+      {/* <Shader3 /> */}
       {/* <Shader2 /> */}
       {/* <Plane />
       <Sphere /> */}
